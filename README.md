@@ -57,10 +57,10 @@ To run this application on your own computer, follow the steps below:
 -Ensure you have an active internet connection to connect to the remote MySQL database.
 ### Images
 
-![Login](images/login.png)
-![Register page](images/register.png)
-![Main page](images/mainPage.png)
-![Warehouse](images/warehouse.png)
+![Login](login.png)
+![Register page](register.png)
+![Main page](mainPage.png)
+![Warehouse](warehouse.png)
 
 
 ## Contributors
