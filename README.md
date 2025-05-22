@@ -46,7 +46,7 @@ To run this application on your own computer, follow the steps below:
 
 
 -Make sure the JavaFX .jar libraries inside the lib folder are correctly referenced in settings.json .
--In the .vscode file there is launch.json file. You may enter this file and change “vmArgs”: and change the path name according to your Javafx.sdk lib path name. 
+-In the .vscode file there is launch.json file. You may enter this file and change “vmArgs” : and change the path name according to your Javafx.sdk lib path name. 
 -To update your JavaFX --module-path, you should point it to your local JavaFX SDK path. For example, if you downloaded and extracted JavaFX 17 to your Downloads folder, the path might look like this:
 
 "--module-path C:/Users/esine/Downloads/openjfx-17.0.15_windows-x64_bin-sdk/javafx-sdk-17.0.15/lib --add-modules javafx.controls,javafx.fxml"
@@ -67,10 +67,10 @@ To run this application on your own computer, follow the steps below:
 
 | Name           | Contribution                                               					     |                                                      
 |----------------|------------------------------------------------------------------------------------------------------|
-| Esin Enni      | Database connection, warehouse operations (Java code and MySQL tables), server configuration, UI design, and report writing. 					           	|
-| Neslihan Sandıkcı | User login/logout features, User and Farmer classes (Java code and MySQL tables), UI design, and report writing.            |
-| Feyza Öztürk   | Product-related methods, adding products, setting specific harvest dates, yield calculation, MySQL tables, UI design, and report writing. |
-| Simge Altın    | Notification-related classes (Notification, NotificationService), MySQL tables, UI design, and report writing.                |
+| Esin Enni      | Database connection, warehouse operations (Java code and MySQL tables), server configuration, GUI design, and report writing. 					           	|
+| Neslihan Sandıkcı | User login/logout features, User and Farmer classes (Java code and MySQL tables), GUI design, and report writing.            |
+| Feyza Öztürk   | Product-related methods, adding products, setting specific harvest dates, yield calculation, MySQL tables, GUI design, and report writing. |
+| Simge Altın    | Notification-related classes (Notification, NotificationService), MySQL tables, GUI design, and report writing.                |
 
 
 
