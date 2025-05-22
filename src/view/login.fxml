@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.LoginController"
+           stylesheets="@styles.css"
+           styleClass="login-background">
+           
+    <!-- Dekoratif Arka Plan Şekilleri -->
+    <StackPane>
+        <Circle radius="250" styleClass="login-decoration-circle-1"/>
+        <Circle radius="180" styleClass="login-decoration-circle-2"/>
+        <ImageView fitWidth="300" fitHeight="300" preserveRatio="true">
+            <image>
+                <Image url="@../images/bomba-10.png"/>
+            </image>
+            <StackPane.alignment>CENTER</StackPane.alignment>
+        </ImageView>
+        <Path styleClass="login-decoration-leaf">
+            <elements>
+                <MoveTo x="0" y="0"/>
+                <CubicCurveTo controlX1="50" controlY1="-50" controlX2="50" controlY2="-100" x="0" y="-100"/>
+                <CubicCurveTo controlX1="-50" controlY1="-100" controlX2="-50" controlY2="-50" x="0" y="0"/>
+                <ClosePath/>
+            </elements>
+        </Path>
+    </StackPane>
+
+    <HBox alignment="CENTER" spacing="50">
+        <!-- Sol Taraf - Hoşgeldiniz Bölümü -->
+        <VBox alignment="CENTER" 
+              maxWidth="400" 
+              styleClass="login-welcome-panel"
+              spacing="20">
+            
+            <ImageView fitWidth="80" fitHeight="80" preserveRatio="true" styleClass="login-logo">
+                <image>
+                    <Image url="@../images/bomba-10.png"/>
+                </image>
+            </ImageView>
+            <VBox alignment="CENTER" spacing="10">
+                <Text text="Hoş Geldiniz" 
+                      styleClass="login-welcome-title"/>
+                <Text text="Çiftliğinizi kolayca yönetin" 
+                      styleClass="login-welcome-subtitle"
+                      wrappingWidth="300"/>
+            </VBox>
+            
+            <!-- İstatistik Kartları -->
+            <VBox spacing="15" styleClass="login-stats">
+                <HBox styleClass="login-stat-item" spacing="10">
+                    <Circle radius="5" styleClass="login-stat-dot"/>
+                    <Text text="Kolay ürün takibi" styleClass="login-stat-text"/>
+                </HBox>
+                <HBox styleClass="login-stat-item" spacing="10">
+                    <Circle radius="5" styleClass="login-stat-dot"/>
+                    <Text text="Detaylı raporlama" styleClass="login-stat-text"/>
+                </HBox>
+                <HBox styleClass="login-stat-item" spacing="10">
+                    <Circle radius="5" styleClass="login-stat-dot"/>
+                    <Text text="Anlık bildirimler" styleClass="login-stat-text"/>
+                </HBox>
+            </VBox>
+        </VBox>
+
+        <!-- Sağ Taraf - Giriş Formu -->
+        <VBox alignment="CENTER" 
+              maxWidth="400" 
+              styleClass="login-panel"
+              spacing="20">
+            
+            <Text text="Çiftlik Yönetim Sistemi" 
+                  styleClass="login-title"/>
+            
+            <!-- Giriş Formu -->
+            <VBox spacing="20" styleClass="login-form">
+                <!-- Email Alanı -->
+                <VBox spacing="8">
+                    <Label text="Email" styleClass="login-label"/>
+                    <TextField fx:id="emailField" 
+                              promptText="Email adresinizi girin"
+                              styleClass="login-field"/>
+                </VBox>
+
+                <!-- Şifre Alanı -->
+                <VBox spacing="8">
+                    <Label text="Şifre" styleClass="login-label"/>
+                    <PasswordField fx:id="passwordField" 
+                                 promptText="Şifrenizi girin"
+                                 styleClass="login-field"/>
+                </VBox>
+
+                <!-- Giriş Butonu -->
+                <Button text="Giriş Yap" 
+                        onAction="#handleLogin"
+                        styleClass="login-button"
+                        maxWidth="Infinity"/>
+
+                <!-- Kayıt Ol Linki -->
+                <HBox alignment="CENTER" spacing="5" styleClass="login-footer">
+                    <Label text="Hesabınız yok mu?" 
+                           styleClass="login-text"/>
+                    <Hyperlink text="Kayıt Olun" 
+                              onAction="#goToRegister"
+                              styleClass="login-link"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </HBox>
+</StackPane>

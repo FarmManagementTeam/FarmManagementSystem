@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="15" style="-fx-background-color: #f4f4f4;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.RegisterController">
+
+    <padding>
+        <Insets top="20" right="40" bottom="20" left="40"/>
+    </padding>
+
+    <Label text="Çiftlik Yönetim Sistemi" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label text="Yeni Hesap Oluştur" style="-fx-font-size: 18px;"/>
+
+    <VBox spacing="10" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 5;">
+        <TextField fx:id="nameField" promptText="Ad" style="-fx-pref-width: 250;"/>
+        <TextField fx:id="surnameField" promptText="Soyad" style="-fx-pref-width: 250;"/>
+        <TextField fx:id="emailField" promptText="Email" style="-fx-pref-width: 250;"/>
+        <PasswordField fx:id="passwordField" promptText="Şifre" style="-fx-pref-width: 250;"/>
+        <PasswordField fx:id="confirmPasswordField" promptText="Şifreyi Tekrar Girin" style="-fx-pref-width: 250;"/>
+        <TextField fx:id="areaSizeField" promptText="Arazi Büyüklüğü (Dönüm)" style="-fx-pref-width: 250;"/>
+        
+        <Button onAction="#handleRegister" text="Kayıt Ol" 
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-pref-width: 250;"/>
+    </VBox>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Zaten hesabınız var mı?"/>
+        <Button onAction="#goToLogin" text="Giriş Yap" 
+                style="-fx-background-color: transparent; -fx-text-fill: #2196F3;"/>
+    </HBox>
+</VBox> 

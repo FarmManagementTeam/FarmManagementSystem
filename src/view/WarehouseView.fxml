@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" style="-fx-background-color: white; -fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.WarehouseController">
+
+    <Label text="Depom" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <!-- İstatistikler -->
+    <HBox spacing="20">
+        <VBox style="-fx-background-color: #E3F2FD; -fx-padding: 15; -fx-background-radius: 5;" 
+              prefWidth="200" prefHeight="100">
+            <Label text="Toplam Ürün" style="-fx-font-weight: bold;"/>
+            <Label fx:id="totalProductsLabel" text="0" style="-fx-font-size: 24px;"/>
+        </VBox>
+
+        <VBox style="-fx-background-color: #E8F5E9; -fx-padding: 15; -fx-background-radius: 5;"
+              prefWidth="200" prefHeight="100">
+            <Label text="Hasat Edilmiş Ürün" style="-fx-font-weight: bold;"/>
+            <Label fx:id="harvestedProductsLabel" text="0" style="-fx-font-size: 24px;"/>
+        </VBox>
+
+        <VBox style="-fx-background-color: #FFF3E0; -fx-padding: 15; -fx-background-radius: 5;"
+              prefWidth="200" prefHeight="100">
+            <Label text="Kullanılan Alan (Dönüm)" style="-fx-font-weight: bold;"/>
+            <Label fx:id="usedAreaLabel" text="0" style="-fx-font-size: 24px;"/>
+        </VBox>
+    </HBox>
+
+    <!-- Yaklaşan Hasatlar -->
+    <VBox spacing="10">
+        <Label text="Yaklaşan Hasatlar" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <TableView fx:id="upcomingHarvestTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="productNameColumn" text="Ürün Adı" prefWidth="150"/>
+                <TableColumn fx:id="plantingDateColumn" text="Ekim Tarihi" prefWidth="120"/>
+                <TableColumn fx:id="harvestDateColumn" text="Hasat Tarihi" prefWidth="120"/>
+                <TableColumn fx:id="daysUntilHarvestColumn" text="Kalan Gün" prefWidth="100"/>
+                <TableColumn fx:id="expectedYieldColumn" text="Tahmini Verim" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Hasat Edilmiş Ürünler -->
+    <VBox spacing="10">
+        <Label text="Hasat Edilmiş Ürünler" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <TableView fx:id="harvestedProductsTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="harvestedNameColumn" text="Ürün Adı" prefWidth="150"/>
+                <TableColumn fx:id="harvestedDateColumn" text="Hasat Tarihi" prefWidth="120"/>
+                <TableColumn fx:id="actualYieldColumn" text="Gerçek Verim" prefWidth="120"/>
+                <TableColumn fx:id="areaUsedColumn" text="Kullanılan Alan" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+</VBox> 

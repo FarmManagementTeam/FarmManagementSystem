@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" style="-fx-background-color: white; -fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ProductsController">
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Ürünlerim" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="+ Yeni Ürün Ekle" onAction="#showAddProductDialog"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    </HBox>
+
+    <TableView fx:id="productsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="nameColumn" text="Ürün Adı" prefWidth="150"/>
+            <TableColumn fx:id="plantingDateColumn" text="Ekim Tarihi" prefWidth="120"/>
+            <TableColumn fx:id="harvestDateColumn" text="Tahmini Hasat" prefWidth="120"/>
+            <TableColumn fx:id="areaUsedColumn" text="Kullanılan Alan" prefWidth="120"/>
+            <TableColumn fx:id="harvestedColumn" text="Hasat Durumu" prefWidth="100"/>
+            <TableColumn fx:id="actionsColumn" text="İşlemler" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+</VBox> 

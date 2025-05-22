@@ -1,0 +1,309 @@
+.root {
+    -fx-background-color: #F5F5DC; /* Açık krem rengi */
+}
+
+/* Login Screen Styles */
+.login-background {
+    -fx-background-color: linear-gradient(to bottom right, #f4efea, #e9d8a6);
+}
+
+/* Dekoratif Elementler */
+.login-decoration-circle-1 {
+    -fx-fill: linear-gradient(to bottom right, rgba(163, 196, 169, 0.2), rgba(59, 90, 64, 0.05));
+    -fx-translate-x: -500;
+    -fx-translate-y: -200;
+    -fx-effect: dropshadow(gaussian, rgba(59, 90, 64, 0.1), 20, 0, 0, 0);
+}
+
+.login-decoration-circle-2 {
+    -fx-fill: linear-gradient(to bottom right, rgba(233, 216, 166, 0.1), rgba(244, 239, 234, 0.1));
+    -fx-translate-x: 500;
+    -fx-translate-y: 200;
+    -fx-effect: dropshadow(gaussian, rgba(59, 90, 64, 0.1), 20, 0, 0, 0);
+}
+
+.login-decoration-circle-2 ImageView {
+    -fx-translate-x: 500;
+    -fx-translate-y: 200;
+    -fx-effect: dropshadow(gaussian, rgba(59, 90, 64, 0.2), 15, 0, 0, 0);
+}
+
+.login-decoration-leaf {
+    -fx-fill: linear-gradient(to bottom right, #a3c4a9, #3b5a40);
+    -fx-translate-x: 400;
+    -fx-translate-y: -250;
+    -fx-rotate: 45;
+    -fx-opacity: 0.1;
+    -fx-scale-x: 0.7;
+    -fx-scale-y: 0.7;
+}
+
+/* Sol Panel - Hoşgeldiniz Bölümü */
+.login-welcome-panel {
+    -fx-background-color: rgba(59, 90, 64, 0.95);
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 0);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+
+.login-welcome-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-fill: #f4efea;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 1, 0, 0, 1);
+}
+
+.login-welcome-subtitle {
+    -fx-font-size: 18px;
+    -fx-fill: #e9d8a6;
+    -fx-text-alignment: center;
+}
+
+.login-logo {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-background-radius: 40;
+    -fx-background-color: transparent;
+}
+
+/* İstatistik Kartları */
+.login-stats {
+    -fx-padding: 20 0 0 0;
+}
+
+.login-stat-item {
+    -fx-padding: 10;
+    -fx-background-color: rgba(163, 196, 169, 0.1);
+    -fx-background-radius: 8;
+}
+
+.login-stat-dot {
+    -fx-fill: #a3c4a9;
+}
+
+.login-stat-text {
+    -fx-fill: #f4efea;
+    -fx-font-size: 14px;
+}
+
+/* Sağ Panel - Giriş Formu */
+.login-panel {
+    -fx-background-color: rgba(244, 239, 234, 0.97);
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 0);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+
+.login-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-fill: #3b5a40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 1, 0, 0, 1);
+}
+
+.login-form {
+    -fx-padding: 30 0;
+}
+
+.login-label {
+    -fx-text-fill: #3b5a40;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.login-field {
+    -fx-background-color: rgba(244, 239, 234, 0.7);
+    -fx-border-color: #a3c4a9;
+    -fx-border-width: 0 0 2 0;
+    -fx-background-radius: 5;
+    -fx-padding: 12 15;
+    -fx-font-size: 14px;
+}
+
+.login-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #3b5a40;
+    -fx-effect: dropshadow(gaussian, rgba(59, 90, 64, 0.2), 10, 0, 0, 0);
+}
+
+.login-button {
+    -fx-background-color: #3b5a40;
+    -fx-text-fill: #f4efea;
+    -fx-font-weight: bold;
+    -fx-padding: 12;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 0);
+}
+
+.login-button:hover {
+    -fx-background-color: #2d4530;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 0);
+    -fx-translate-y: -1;
+}
+
+.login-button:pressed {
+    -fx-background-color: #1f3323;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 0);
+    -fx-translate-y: 1;
+}
+
+.login-footer {
+    -fx-padding: 10 0 0 0;
+}
+
+.login-text {
+    -fx-text-fill: #3b5a40;
+    -fx-font-size: 13px;
+}
+
+.login-link {
+    -fx-text-fill: #3b5a40;
+    -fx-font-weight: bold;
+    -fx-underline: false;
+    -fx-font-size: 13px;
+}
+
+.login-link:hover {
+    -fx-text-fill: #2d4530;
+    -fx-underline: true;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    -fx-background-color: linear-gradient(to bottom right, #f4efea, rgba(173, 216, 230, 0.3));
+    -fx-effect: dropshadow(gaussian, rgba(59, 90, 64, 0.1), 15, 0, 0, 0);
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+}
+
+.dashboard-container:hover {
+    -fx-effect: dropshadow(gaussian, rgba(59, 90, 64, 0.2), 10, 0, 0, 0);
+}
+
+.stat-box {
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 0);
+    -fx-padding: 15px;
+}
+
+.stat-box-products {
+    -fx-background-color: linear-gradient(to bottom right, #E8F4F8, #ADD8E6);
+    -fx-border-color: #87CEEB;
+    -fx-border-width: 0 0 3 0;
+}
+
+.stat-box-active {
+    -fx-background-color: linear-gradient(to bottom right, #FFE4E1, #FF6B6B);
+    -fx-border-color: #FF4136;
+    -fx-border-width: 0 0 3 0;
+}
+
+.stat-box-area {
+    -fx-background-color: linear-gradient(to bottom right, #a3c4a9, #3b5a40);
+    -fx-border-color: #3b5a40;
+    -fx-border-width: 0 0 3 0;
+}
+
+.stat-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2F4F4F;
+}
+
+.stat-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2F4F4F;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3b5a40;
+    -fx-text-fill: #f4efea;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3b5a40;
+}
+
+.table-row-cell {
+    -fx-background-color: rgba(244, 239, 234, 0.9);
+    -fx-border-color: #ADD8E6;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #E8F4F8;
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: #87CEEB;
+    -fx-border-radius: 5;
+}
+
+.nav-button {
+    -fx-background-color: #FFE4E1;  /* Misty Rose */
+    -fx-text-fill: #CD5C5C;  /* Indian Red */
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 0);
+    -fx-border-color: #FFB6C1;  /* Light Pink */
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+}
+
+.nav-button:hover {
+    -fx-background-color: #FFB6C1;  /* Light Pink */
+    -fx-text-fill: #CD5C5C;  /* Indian Red */
+    -fx-border-color: #CD5C5C;
+}
+
+.nav-button-home {
+    -fx-background-color: #CD5C5C;  /* Indian Red */
+    -fx-text-fill: #FFE4E1;  /* Misty Rose */
+    -fx-border-width: 0;
+}
+
+.nav-button-home:hover {
+    -fx-background-color: #BC4B4B;  /* Darker Indian Red */
+}
+
+/* Info Box Styles */
+.info-box {
+    -fx-background-color: linear-gradient(to right, #FFE4E1, #FFB6C1);
+    -fx-padding: 15;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 0);
+    -fx-border-color: #CD5C5C;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-radius: 10;
+}
+
+.info-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #CD5C5C;
+}
+
+.info-content {
+    -fx-padding: 10 0 0 0;
+}
+
+.info-highlight {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #CD5C5C;
+}
+
+.info-emphasis {
+    -fx-font-style: italic;
+    -fx-font-size: 14px;
+    -fx-text-fill: #CD5C5C;
+} 

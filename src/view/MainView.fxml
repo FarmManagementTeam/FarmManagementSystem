@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.MainController"
+            stylesheets="@styles.css">
+
+    <top>
+        <HBox style="-fx-background-color: #3b5a40; -fx-padding: 10; -fx-spacing: 10;">
+            <Label text="Çiftlik Yönetim Sistemi" style="-fx-text-fill: #f4efea; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Region HBox.hgrow="ALWAYS" />
+            
+            <!-- Bildirim Butonu ve Panel -->
+            <StackPane>
+                <Button fx:id="notificationButton" onAction="#toggleNotificationPanel"
+                        style="-fx-background-color: transparent; -fx-text-fill: #f4efea;">
+                    <graphic>
+                        <HBox spacing="5" alignment="CENTER">
+                            <Label text="Bildirimler" style="-fx-text-fill: #f4efea;"/>
+                            <Label fx:id="notificationCount" text="0"
+                                   style="-fx-background-color: #a3c4a9; -fx-text-fill: #3b5a40; 
+                                          -fx-padding: 2 6; -fx-background-radius: 10;"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+                
+                <!-- Bildirim Paneli -->
+                <VBox fx:id="notificationPanel" visible="false" managed="false"
+                      style="-fx-background-color: #f4efea; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 0);
+                             -fx-padding: 10; -fx-background-radius: 5;"
+                      maxHeight="400" prefWidth="300">
+                    <Label text="Bildirimler" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #3b5a40;"/>
+                    <ListView fx:id="notificationList" VBox.vgrow="ALWAYS" maxHeight="350"/>
+                </VBox>
+            </StackPane>
+
+            <Label fx:id="userNameLabel" style="-fx-text-fill: #f4efea; -fx-font-weight: bold;"/>
+            <Button text="Çıkış" onAction="#handleLogout" 
+                    style="-fx-background-color: #a3c4a9; -fx-text-fill: #3b5a40; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="10" style="-fx-background-color: white; -fx-padding: 10; -fx-min-width: 200;">
+            <Button text="Ana Sayfa" onAction="#showDashboard" maxWidth="Infinity"
+                    styleClass="nav-button, nav-button-home"/>
+            <Button text="Ürünlerim" onAction="#showProducts" maxWidth="Infinity"
+                    styleClass="nav-button"/>
+            <Button text="Depom" onAction="#showWarehouse" maxWidth="Infinity"
+                    styleClass="nav-button"/>
+            <Button text="Bildirimler" onAction="#showNotifications" maxWidth="Infinity"
+                    styleClass="nav-button"/>
+            <Button text="Profil" onAction="#showProfile" maxWidth="Infinity"
+                    styleClass="nav-button"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox fx:id="contentArea" styleClass="dashboard-container" style="-fx-padding: 20; -fx-spacing: 20;">
+            <!-- Dashboard Content -->
+            <HBox spacing="20">
+                <VBox styleClass="stat-box, stat-box-products" prefWidth="200" prefHeight="100">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ImageView fitWidth="32" fitHeight="32" preserveRatio="true">
+                            <Image url="@../images/products.png"/>
+                        </ImageView>
+                        <VBox>
+                            <Label text="Toplam Ürün" styleClass="stat-label"/>
+                            <Label fx:id="totalProductsLabel" text="0" styleClass="stat-value"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <VBox styleClass="stat-box, stat-box-active" prefWidth="200" prefHeight="100">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ImageView fitWidth="32" fitHeight="32" preserveRatio="true">
+                            <Image url="@../images/active.png"/>
+                        </ImageView>
+                        <VBox>
+                            <Label text="Aktif Ekili Ürün" styleClass="stat-label"/>
+                            <Label fx:id="activeCropsLabel" text="0" styleClass="stat-value"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <VBox styleClass="stat-box, stat-box-area" prefWidth="200" prefHeight="100">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ImageView fitWidth="32" fitHeight="32" preserveRatio="true">
+                            <Image url="@../images/area.png"/>
+                        </ImageView>
+                        <VBox>
+                            <Label text="Toplam Alan (Dönüm)" styleClass="stat-label"/>
+                            <Label fx:id="totalAreaLabel" text="0" styleClass="stat-value"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </HBox>
+
+            <!-- Bunu Biliyor Muydunuz? -->
+            <VBox styleClass="info-box" spacing="10">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <ImageView fitWidth="32" fitHeight="32" preserveRatio="true">
+                        <Image url="@../images/tavuk.png"/>
+                    </ImageView>
+                    <Label text="Bunu Biliyor Muydunuz?" styleClass="info-title"/>
+                </HBox>
+                <VBox spacing="10" styleClass="info-content">
+                    <Label text="Arılar olmasa, yediğimiz meyve ve sebzelerin üçte biri olmazdı!" 
+                           styleClass="info-highlight" wrapText="true"/>
+                    <Label text="Bal yapmalarının ötesinde, arılar bitkileri dölleyerek tarımın kalbinde yer alır. Ama tarım ilaçları ve doğa tahribatı yüzünden sayıları hızla azalıyor." 
+                           wrapText="true"/>
+                    <Label text="Onları korumak, aslında kendi soframızı korumak demek." 
+                           styleClass="info-emphasis" wrapText="true"/>
+                </VBox>
+            </VBox>
+
+            <!-- Recent Products Table -->
+            <VBox spacing="10">
+                <Label text="Son Eklenen Ürünler" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <TableView fx:id="recentProductsTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="productNameColumn" text="Ürün Adı"/>
+                        <TableColumn fx:id="plantingDateColumn" text="Ekim Tarihi"/>
+                        <TableColumn fx:id="harvestDateColumn" text="Tahmini Hasat"/>
+                        <TableColumn fx:id="areaUsedColumn" text="Kullanılan Alan"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>

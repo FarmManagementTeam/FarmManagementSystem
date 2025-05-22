@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.*?>
+<?import java.lang.String?>
+
+<VBox spacing="20" style="-fx-background-color: white; -fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.NotificationsController">
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Bildirimler" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Tümünü Okundu İşaretle" onAction="#markAllAsRead"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    </HBox>
+
+    <!-- Filtreler -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Filtrele:" style="-fx-font-weight: bold;"/>
+        <ComboBox fx:id="filterComboBox" prefWidth="150">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Tümü"/>
+                    <String fx:value="Okunmamış"/>
+                    <String fx:value="Okunmuş"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
+
+    <!-- Bildirim Listesi -->
+    <ListView fx:id="notificationsListView" VBox.vgrow="ALWAYS">
+        <placeholder>
+            <Label text="Bildirim bulunmamaktadır."/>
+        </placeholder>
+    </ListView>
+
+</VBox> 

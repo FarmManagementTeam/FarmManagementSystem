@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="20" style="-fx-background-color: white; -fx-padding: 30;"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ProfileController">
+
+    <Label text="Profil Bilgileri" 
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2196F3;"/>
+
+    <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #f5f5f5; -fx-background-radius: 10;">
+        <!-- Ad -->
+        <VBox spacing="5">
+            <Label text="Ad" style="-fx-font-weight: bold; -fx-text-fill: #666;"/>
+            <Label fx:id="nameLabel" style="-fx-font-size: 16px; -fx-text-fill: #333;"/>
+        </VBox>
+
+        <!-- Soyad -->
+        <VBox spacing="5">
+            <Label text="Soyad" style="-fx-font-weight: bold; -fx-text-fill: #666;"/>
+            <Label fx:id="surnameLabel" style="-fx-font-size: 16px; -fx-text-fill: #333;"/>
+        </VBox>
+
+        <!-- Email -->
+        <VBox spacing="5">
+            <Label text="Email" style="-fx-font-weight: bold; -fx-text-fill: #666;"/>
+            <Label fx:id="emailLabel" style="-fx-font-size: 16px; -fx-text-fill: #333;"/>
+        </VBox>
+
+        <!-- Alan Büyüklüğü -->
+        <VBox spacing="5">
+            <Label text="Toplam Alan" style="-fx-font-weight: bold; -fx-text-fill: #666;"/>
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label fx:id="areaSizeLabel" style="-fx-font-size: 16px; -fx-text-fill: #333;"/>
+                <Label text="Dönüm" style="-fx-font-size: 16px; -fx-text-fill: #666;"/>
+            </HBox>
+        </VBox>
+    </VBox>
+
+    <!-- Kayıt Tarihi -->
+    <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10; -fx-background-color: #e3f2fd; -fx-background-radius: 5;">
+        <Label text="Kayıt Tarihi: " style="-fx-text-fill: #1976d2;"/>
+        <Label fx:id="registrationDateLabel" style="-fx-text-fill: #1976d2; -fx-font-weight: bold;"/>
+    </HBox>
+
+</VBox> 

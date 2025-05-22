@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" style="-fx-background-color: white; -fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.AddProductDialogController">
+
+    <Label text="Yeni Ürün Ekle" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <GridPane vgap="10" hgap="10">
+        <padding>
+            <Insets top="10"/>
+        </padding>
+
+        <Label text="Ürün Adı:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nameField" promptText="Ürün adını girin" 
+                   GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Ekim Tarihi:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="plantingDatePicker" promptText="Ekim tarihini seçin"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Kullanılan Alan (Dönüm):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="areaField" promptText="Kullanılan alanı girin"
+                   GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Hasat Süresi (Gün):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="harvestTimerField" promptText="Hasat süresini girin"
+                   GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="İptal" onAction="#handleCancel" 
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white;"/>
+        <Button text="Ekle" onAction="#handleAdd" 
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    </HBox>
+
+</VBox> 

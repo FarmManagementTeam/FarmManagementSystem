@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "ConsoleNotifier",
+      "request": "launch",
+      "mainClass": "model.ConsoleNotifier",
+      "projectName": "FarmManagementSystem_1e18fb0a"
+    },
+    {
+      "type": "java",
+      "name": "Run JavaFX App",
+      "request": "launch",
+      "mainClass": "Main",
+      "vmArgs": "--module-path \"C:/Users/Simge Altın/OneDrive/Masaüstü/openjfx-24.0.1_windows-x64_bin-sdk/javafx-sdk-24.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+   }
+  ]  
+}
